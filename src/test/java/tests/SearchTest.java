@@ -17,7 +17,7 @@ public class SearchTest extends BaseTest {
     public void testSearchAndAddItemToCart()  {
         final String item1 = "sofa";
         final String item2 = "table";
-        final String expectedErrorMessage = "Discount code is invalid.";
+        final String expectedErrorMessage = "Discount code is invalid. ";
         openBaseURL()
                 .clickAndClearSearchField()
                 .inputTextAndClickEnter(item1);
