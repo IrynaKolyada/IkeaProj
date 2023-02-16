@@ -1,7 +1,6 @@
 package tests;
 
 import base.BaseTest;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -20,27 +19,27 @@ public class FooterMenuTest extends BaseTest {
 
         MainPage mainPage = new MainPage(getDriver());
 
-        Assert.assertEquals(mainPage.getNumberSocilaMediaNumberIcons(), 5);
+        Assert.assertEquals(mainPage.getNumberSocialMediaNumberIcons(), 5);
         Assert.assertEquals(actualMediaIcons,expectedMediaIcons);
     }
 
-//    @Test(dataProvider = "SocialMediaIcons", dataProviderClass = TestData.class)
-//    public void testSocialMediaIconsNavigateToCorrespondingPages(
-//            int index,  String iconName, String expectedUrl, String expectedTitle) throws InterruptedException {
-//
-//      MainPage mainPage = new MainPage(getDriver());
-//      final String oldUrl = mainPage.getCurrentURL();
-//      final String oldTitle = mainPage.getTitle();
-//
-//      openBaseURL()
-//                .clickAllsocialMediaIcons(index);
-//
-//      String actualUrl = getDriver().getCurrentUrl();
-//      String actualTitle = getDriver().getTitle();
-//
-//        Assert.assertNotEquals(actualUrl, oldUrl);
-//        Assert.assertNotEquals(actualTitle, oldTitle);
-//        Assert.assertEquals(actualTitle, expectedTitle);
-//        Assert.assertEquals(actualUrl, expectedUrl);
-//    }
+    @Test(dataProvider = "SocialMediaIcons", dataProviderClass = TestData.class)
+    public void testSocialMediaIconsNavigateToCorrespondingPages(
+            int index,  String iconName, String expectedUrl, String expectedTitle) throws InterruptedException {
+
+      MainPage mainPage = new MainPage(getDriver());
+      final String oldUrl = mainPage.getCurrentURL();
+      final String oldTitle = mainPage.getTitle();
+
+      openBaseURL()
+                .clickAllsocialMediaIcons(index);
+
+      String actualUrl = getDriver().getCurrentUrl();
+      String actualTitle = getDriver().getTitle();
+
+        Assert.assertNotEquals(actualUrl, oldUrl);
+        Assert.assertNotEquals(actualTitle, oldTitle);
+        Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertEquals(actualUrl, expectedUrl);
+    }
 }
