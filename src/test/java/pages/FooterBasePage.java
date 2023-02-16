@@ -34,7 +34,7 @@ public abstract class FooterBasePage extends HeaderBasePage{
         return new MainPage(getDriver());
     }
 
-    public int getNumberSocilaMediaNumberIcons(){
+    public int getNumberSocialMediaNumberIcons(){
         return getNumber(socialMediaIcons);
     }
 
