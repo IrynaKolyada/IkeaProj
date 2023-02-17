@@ -22,9 +22,6 @@ public class ProductPage extends SearchPage{
         super(driver);
     }
 
-
-
-
     public ProductPage clickAddToBagButton(){
         scrollByVisibleElement(addToBagButton);
         click(addToBagButton);
@@ -43,6 +40,12 @@ public class ProductPage extends SearchPage{
         click(shoppingBagIcon);
         return new ShoppingCartPage(getDriver());
     }
+    @FindBy(xpath = "//h1[@class='plp-page-title__title']")
+    private WebElement bedsList;
 
+    String getTextMessage (){
+        String textBeds = bedsList.getText();
+        return textBeds;
+    }
 
 }
