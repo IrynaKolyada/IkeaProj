@@ -24,7 +24,6 @@ public abstract class HeaderBasePage extends BasePage{
     @FindBy(xpath = "//[@class='hnf-header__nav__main']")
     private WebElement productCategory;
 
-//    @FindBy(xpath = "//a[@class='hnf-link hnf-menu--active']")
     @FindBy(xpath = "//nav[2]/ul/li[5]/a")
     private WebElement furniture;
 

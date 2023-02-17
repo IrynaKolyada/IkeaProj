@@ -13,23 +13,19 @@ public class SearchPage extends FooterBasePage{
     @FindBy(xpath = "//div[@class='search-field']//input[@type='search']")
     private WebElement searchFieldSearchPage;
 
-
-
-
-
     public SearchPage(WebDriver driver) {
         super(driver);
     }
 
 
-    public ProductPage findItemAndClick(int num){
+    public ItemPage findItemAndClick(int num){
         getActions().moveToElement(getDriver().findElement(
                         By.xpath("//div[@class='plp-fragment-wrapper'][" + num + "]//div[@class='pip-product-compact']")))
                 .click()
                 .build()
                 .perform();
 
-        return new ProductPage(getDriver());
+        return new ItemPage(getDriver());
     }
 
 

@@ -49,11 +49,4 @@ public class ShoppingCartPage extends FooterBasePage{
     public  String getErrorMessage (){
        return   getText(errorMessage);
     }
-    @FindBy(xpath = "//h1[@class='plp-page-title__title']")
-    private WebElement bedsList;
-
-    public String getTextMessage (){
-        String textBeds = bedsList.getText();
-        return textBeds;
-    }
 }
