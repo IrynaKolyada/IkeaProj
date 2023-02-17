@@ -5,10 +5,8 @@ import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-import pages.MainPage;
-import pages.ProductPage;
-import pages.SearchPage;
-import pages.ShoppingCartPage;
+import pages.*;
+
 
 public class SearchTest extends BaseTest {
     static final String Attribute = "data-count";
@@ -50,7 +48,7 @@ public class SearchTest extends BaseTest {
                 .clickOnBabyCategory()
                 .clickOnBabyTextilesCategory();
 
-        new ProductPage(getDriver())
+        new ItemPage(getDriver())
                 .findItemAndClick(5)
                 .clickAddToBagButton()
                 .clickXbutton()
@@ -75,8 +73,16 @@ public class SearchTest extends BaseTest {
         Reporter.log("numberOfInputs " + numberSearchHistory, true);
         Assert.assertTrue(numberSearchHistory > 0);
     }
+    @Test
+    public void testFindProductExample() {
+        final String productBeds = "Beds";
+        MainPage mainPage = openBaseURL()
+                .clickOnHamburgerMenu()
+                .clickOnProductList()
+                .clickOnFurniture()
+                .clickOnBed();
 
-
-
-
-}
+        BedsPage bedsPage = new BedsPage(getDriver());
+        Assert.assertEquals(bedsPage.getTextMessage(), productBeds);
+        }
+    }

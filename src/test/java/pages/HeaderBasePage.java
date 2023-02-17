@@ -18,6 +18,18 @@ public abstract class HeaderBasePage extends BasePage{
     @FindBy(xpath = "//div//ul[@class='hnf-menu__nav__main']/li[1]")
     private WebElement productsOption;
 
+    @FindBy(xpath = "//a[@data-tracking-label='products']")
+    private WebElement productsInList;
+
+    @FindBy(xpath = "//[@class='hnf-header__nav__main']")
+    private WebElement productCategory;
+
+    @FindBy(xpath = "//nav[2]/ul/li[5]/a")
+    private WebElement furniture;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[5]/a")
+    private WebElement bed;
+
     @FindBy(xpath = "//nav//ul[@data-tracking-label='products']/li[9]")
     private WebElement babyKidsOption;
 
@@ -76,20 +88,32 @@ public abstract class HeaderBasePage extends BasePage{
         getWait10().until(ExpectedConditions.elementToBeClickable(babyKidsOption)).click();
         return new MainPage(getDriver());
     }
+    public MainPage clickOnHamburgerMenu(){
+        click(hamburgerIcon);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnProductList(){
+        click(productsInList);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnFurniture(){
+        click(furniture);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnBed(){
+        click(bed);
+        return new MainPage(getDriver());
+    }
     public int countOfSearchFieldInputs(){
         click(searchFieldHeaderMenu);
        return getNumber(numberOfSearchHistory);
-
     }
-
     public MainPage clickLogInButton(){
         click(logInButton);
         return new MainPage (getDriver());
     }
-
     public SingInAccount clickSignInButton(){
         click(signInButton);
         return new SingInAccount(getDriver());
     }
-
 }
