@@ -12,7 +12,8 @@ import java.util.List;
 public class FooterMenuTest extends BaseTest {
     @Test
     public void testFooterMenuHasSocialMediaIcons(){
-        final  List<String> expectedMediaIcons = List.of("facebook", "instagram", "pinterest", "twitter", "youtube");
+        final  List<String> expectedMediaIcons = List.of("facebook",
+                "instagram", "pinterest", "twitter", "youtube");
 
         List<String> actualMediaIcons = openBaseURL().scrollToFooterIconBar().getListSocialMedia("aria-label");
         Reporter.log("List url ---" + actualMediaIcons, true);
@@ -25,7 +26,8 @@ public class FooterMenuTest extends BaseTest {
 
     @Test(dataProvider = "SocialMediaIcons", dataProviderClass = TestData.class)
     public void testSocialMediaIconsNavigateToCorrespondingPages(
-            int index,  String iconName, String expectedUrl, String expectedTitle) throws InterruptedException {
+            int index,  String iconName, String expectedUrl, String expectedTitle)
+            throws InterruptedException {
 
       MainPage mainPage = new MainPage(getDriver());
       final String oldUrl = mainPage.getCurrentURL();
