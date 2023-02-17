@@ -1,10 +1,14 @@
 package tests;
 
+
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-import pages.*;
+import pages.MainPage;
+import pages.ProductPage;
+import pages.SearchPage;
+import pages.ShoppingCartPage;
 
 public class SearchTest extends BaseTest {
     static final String Attribute = "data-count";

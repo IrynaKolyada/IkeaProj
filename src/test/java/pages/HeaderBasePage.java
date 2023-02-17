@@ -53,6 +53,7 @@ public abstract class HeaderBasePage extends BasePage{
 
     public HeaderBasePage(WebDriver driver) {
         super(driver);
+
     }
 
     public MainPage clickAndClearSearchField(){
