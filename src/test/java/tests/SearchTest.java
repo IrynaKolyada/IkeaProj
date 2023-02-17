@@ -1,11 +1,12 @@
 package tests;
 
+
 import base.BaseTest;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.*;
+
 
 public class SearchTest extends BaseTest {
     static final String Attribute = "data-count";
@@ -47,7 +48,7 @@ public class SearchTest extends BaseTest {
                 .clickOnBabyCategory()
                 .clickOnBabyTextilesCategory();
 
-        new ProductPage(getDriver())
+        new ItemPage(getDriver())
                 .findItemAndClick(5)
                 .clickAddToBagButton()
                 .clickXbutton()
@@ -81,7 +82,7 @@ public class SearchTest extends BaseTest {
                 .clickOnFurniture()
                 .clickOnBed();
 
-        ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
-        Assert.assertEquals(shoppingCartPage.getTextMessage(), productBeds);
+        BedsPage bedsPage = new BedsPage(getDriver());
+        Assert.assertEquals(bedsPage.getTextMessage(), productBeds);
         }
     }

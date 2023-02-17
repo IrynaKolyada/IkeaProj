@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ProductPage extends SearchPage{
+public class ItemPage extends SearchPage{
 
     @FindBy(xpath = "//div[@class='pip-buy-module__buttons--container']")
     private WebElement addToBagButton;
@@ -17,18 +17,18 @@ public class ProductPage extends SearchPage{
     private WebElement shoppingBagIcon;
 
 
-    public ProductPage(WebDriver driver) {
+    public ItemPage(WebDriver driver) {
 
         super(driver);
     }
 
-    public ProductPage clickAddToBagButton(){
+    public ItemPage clickAddToBagButton(){
         scrollByVisibleElement(addToBagButton);
         click(addToBagButton);
         return this;
     }
 
-    public ProductPage clickXbutton(){
+    public ItemPage clickXbutton(){
         scrollUpByVisibleElement(xButton);
         click(xButton);
         return this;
