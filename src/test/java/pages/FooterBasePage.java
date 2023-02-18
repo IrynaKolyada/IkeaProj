@@ -10,7 +10,7 @@ import java.util.List;
 
 public abstract class FooterBasePage extends HeaderBasePage{
 
-    @FindBy(css = ".hnf-footer__icon-bar")
+    @FindBy(xpath = "//div[@class='hnf-footer__socialMediaLinks']")
     private WebElement footerIconBar;
 
     @FindBy(xpath = "//div[@class='hnf-footer__socialMediaLinks']/ul/li/a")
@@ -29,7 +29,11 @@ public abstract class FooterBasePage extends HeaderBasePage{
     }
 
     public MainPage scrollToFooterIconBar(){
+
+        scrollDown();
         getActions().moveToElement(footerIconBar).build().perform();
+
+//        scrollByVisibleElement(footerIconBar);
 
         return new MainPage(getDriver());
     }
