@@ -33,8 +33,6 @@ public abstract class FooterBasePage extends HeaderBasePage{
         scrollDown();
         getActions().moveToElement(footerIconBar).build().perform();
 
-//        scrollByVisibleElement(footerIconBar);
-
         return new MainPage(getDriver());
     }
 
