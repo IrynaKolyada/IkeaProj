@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class BedsPage  extends SearchPage {
-    @FindBy(xpath = "//h1[@class='plp-page-title__title']")
+    @FindBy(xpath = "//h1[text()='Beds']")
     private WebElement bedsList;
 
     public BedsPage(WebDriver driver) {
@@ -17,6 +17,5 @@ public class BedsPage  extends SearchPage {
         String textBeds = bedsList.getText();
         return textBeds;
     }
-
-    }
+ }
 
