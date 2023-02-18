@@ -10,8 +10,6 @@ public class BabyCategoryPage extends MainPage{
 @FindBy(xpath = "//nav[@class='vn__nav vn-8-grid']/a[5]")
 private WebElement babyTextiles;
 
-
-
     public BabyCategoryPage(WebDriver driver) {
         super(driver);
     }
