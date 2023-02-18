@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
-public abstract class HeaderBasePage extends BasePage{
+public abstract class HeaderBasePage extends BasePage {
 
     @FindBy(xpath = "//div[@class='search-wrapper']//input[@type='search']")
     private WebElement searchFieldHeaderMenu;
@@ -29,6 +29,15 @@ public abstract class HeaderBasePage extends BasePage{
 
     @FindBy(xpath = "//li[5]/nav/ul/li[5]/a")
     private WebElement bed;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[15]/a")
+    private WebElement bar;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[16]/a")
+    private WebElement cafe;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[21]/a")
+    private WebElement furnitureSet;
 
     @FindBy(xpath = "//nav//ul[@data-tracking-label='products']/li[9]")
     private WebElement babyKidsOption;
@@ -56,64 +65,92 @@ public abstract class HeaderBasePage extends BasePage{
 
     }
 
-    public MainPage clickAndClearSearchField(){
+    public MainPage clickAndClearSearchField() {
         click(searchFieldHeaderMenu);
         clear(searchFieldHeaderMenu);
 
         return new MainPage(getDriver());
     }
 
-    public SearchPage inputTextAndClickEnter(String text){
+    public SearchPage inputTextAndClickEnter(String text) {
 
         inputAndEnter(searchFieldHeaderMenu, text);
 
         return new SearchPage(getDriver());
     }
 
-    public MainPage clickAndChooseDepartmentInHamburgerMenu(){
+    public MainPage clickAndChooseDepartmentInHamburgerMenu() {
         click(hamburgerIcon);
         getWait10().until(ExpectedConditions.elementToBeClickable(productsOption)).click();
         getWait10().until(ExpectedConditions.elementToBeClickable(babyKidsOption)).click();
         return new MainPage(getDriver());
     }
 
-    public BabyCategoryPage clickOnBabyCategory(){
+    public BabyCategoryPage clickOnBabyCategory() {
         getWait10().until(ExpectedConditions.elementToBeClickable(babyCategory)).click();
 
         return new BabyCategoryPage(getDriver());
     }
 
-    public MainPage clickOnProdactCategoryHeaderAndChooseDepartmentInHamburgerMenu(){
+    public MainPage clickOnProdactCategoryHeaderAndChooseDepartmentInHamburgerMenu() {
         click(productCategoryHeader);
         getWait10().until(ExpectedConditions.elementToBeClickable(babyKidsOption)).click();
         return new MainPage(getDriver());
     }
-    public MainPage clickOnHamburgerMenu(){
+
+    public MainPage clickOnHamburgerMenu() {
         click(hamburgerIcon);
         return new MainPage(getDriver());
     }
-    public MainPage clickOnProductList(){
+
+    public MainPage clickOnProductList() {
         click(productsInList);
         return new MainPage(getDriver());
     }
-    public MainPage clickOnFurniture(){
+
+    public MainPage clickOnFurniture() {
         click(furniture);
         return new MainPage(getDriver());
     }
-    public MainPage clickOnBed(){
+
+    public MainPage clickOnBed() {
         click(bed);
         return new MainPage(getDriver());
     }
-    public int countOfSearchFieldInputs(){
+
+    public MainPage clickOnBar() {
+        click(bar);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnFurnitureSet() {
+        click(furnitureSet);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnCafe() {
+        click(cafe);
+        return new MainPage(getDriver());
+    }
+
+    public int countOfSearchFieldInputs() {
         click(searchFieldHeaderMenu);
-       return getNumber(numberOfSearchHistory);
+        return getNumber(numberOfSearchHistory);
     }
-    public MainPage clickLogInButton(){
+
+    public MainPage clickLogInButton() {
         click(logInButton);
-        return new MainPage (getDriver());
+        return new MainPage(getDriver());
     }
-    public SingInAccount clickSignInButton(){
+
+    public SingInAccount clickSignInButton() {
         click(signInButton);
         return new SingInAccount(getDriver());
+    }
+
+    public MainPage clickOnFurnitureFromProduct() {
+        clickOnHamburgerMenu();
+        clickOnProductList();
+        clickOnFurniture();
+        return new MainPage(getDriver());
     }
 }

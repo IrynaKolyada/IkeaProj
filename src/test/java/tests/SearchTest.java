@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.*;
+import pages.furniture_Categories.BedsPage;
 
 
 public class SearchTest extends BaseTest {
@@ -77,9 +78,7 @@ public class SearchTest extends BaseTest {
     public void testFindProductExample() {
         final String productBeds = "Beds";
         MainPage mainPage = openBaseURL()
-                .clickOnHamburgerMenu()
-                .clickOnProductList()
-                .clickOnFurniture()
+                .clickOnFurnitureFromProduct()
                 .clickOnBed();
 
         BedsPage bedsPage = new BedsPage(getDriver());
