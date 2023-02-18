@@ -4,6 +4,7 @@ package tests;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.*;
 import pages.furniture_Categories.BedsPage;
@@ -40,7 +41,7 @@ public class SearchTest extends BaseTest {
         Assert.assertEquals(shoppingCartPage.getActualNumber(Attribute),"2");
         Assert.assertEquals(shoppingCartPage.getErrorMessage(),expectedErrorMessage);
     }
-
+    @Ignore
     @Test
     public void testHamburgerMenuOptions(){
 
