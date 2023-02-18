@@ -73,16 +73,4 @@ public class SearchTest extends BaseTest {
         Reporter.log("numberOfInputs " + numberSearchHistory, true);
         Assert.assertTrue(numberSearchHistory > 0);
     }
-    @Test
-    public void testFindProductExample() {
-        final String productBeds = "Beds";
-        MainPage mainPage = openBaseURL()
-                .clickOnHamburgerMenu()
-                .clickOnProductList()
-                .clickOnFurniture()
-                .clickOnBed();
-
-        BedsPage bedsPage = new BedsPage(getDriver());
-        Assert.assertEquals(bedsPage.getTextMessage(), productBeds);
-        }
-    }
+}

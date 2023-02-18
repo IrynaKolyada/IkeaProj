@@ -24,8 +24,18 @@ public abstract class HeaderBasePage extends BasePage{
     @FindBy(xpath = "//[@class='hnf-header__nav__main']")
     private WebElement productCategory;
 
+
     @FindBy(xpath = "//nav[2]/ul/li[5]/a")
     private WebElement furniture;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[8]/a")
+    private WebElement chairs;
+
+    @FindBy(xpath = "//nav[2]/ul/li[11]/a")
+    private WebElement homeDecor;
+
+    @FindBy(xpath = "//li[11]/nav/ul/li[9]/a")
+    private WebElement mirror;
 
     @FindBy(xpath = "//li[5]/nav/ul/li[5]/a")
     private WebElement bed;
@@ -104,6 +114,19 @@ public abstract class HeaderBasePage extends BasePage{
         click(bed);
         return new MainPage(getDriver());
     }
+    public MainPage clickOnHomeDecor(){
+        click(homeDecor);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnMirror(){
+        click(mirror);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnChairs(){
+        click(chairs);
+        return new MainPage(getDriver());
+    }
+
     public int countOfSearchFieldInputs(){
         click(searchFieldHeaderMenu);
        return getNumber(numberOfSearchHistory);
