@@ -39,6 +39,50 @@ public abstract class HeaderBasePage extends BasePage {
     @FindBy(xpath = "//li[5]/nav/ul/li[21]/a")
     private WebElement furnitureSet;
 
+    @FindBy(xpath = "//li[5]/nav/ul/li[19]/a")
+    private WebElement kidsFurniture;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[2]/a")
+    private WebElement gameFurniture;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[20]/a")
+    private WebElement nurseryFurniture;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[14]/a")
+    private WebElement outdoorPatio;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[18]/a")
+    private WebElement roomDividers;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[10]/a")
+    private WebElement shelvesBookcase;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[17]/a")
+    private WebElement sideboard;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[3]/a")
+    private WebElement sofasSectionals;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[7]/a")
+    private WebElement tablesDesks;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[9]/a")
+    private WebElement tVMediaFurniture;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[13]/a")
+    private WebElement utilityStorageCarts;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[4]/a")
+    private WebElement armchairs;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[6]/a")
+    private WebElement armoiresWardrobes;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[12]/a")
+    private WebElement displayStorageCabinets;
+
+    @FindBy(xpath = "//li[5]/nav/ul/li[11]/a")
+    private WebElement dressersStorageDrawers;
     @FindBy(xpath = "//nav//ul[@data-tracking-label='products']/li[9]")
     private WebElement babyKidsOption;
 
@@ -122,8 +166,84 @@ public abstract class HeaderBasePage extends BasePage {
         click(bar);
         return new MainPage(getDriver());
     }
+
+    public MainPage clickOnKidsFurniture() {
+        click(kidsFurniture);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnNurseryFurniture() {
+        click(nurseryFurniture);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnGameFurniture() {
+        click(gameFurniture);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnOutdoorPatio() {
+        click(outdoorPatio);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnRoomDividers() {
+        click(roomDividers);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnShelvesBookcaseStorage() {
+        click(shelvesBookcase);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnSideboard() {
+        click(sideboard);
+        return new MainPage(getDriver());
+    }
+
     public MainPage clickOnFurnitureSet() {
         click(furnitureSet);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnSofasSectionals() {
+        click(sofasSectionals);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnTablesDesks() {
+        click(tablesDesks);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnTVMediaFurniture() {
+        click(tVMediaFurniture);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnUtilityStorageCarts() {
+        click(utilityStorageCarts);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnDisplayStorageCabinets() {
+        click(displayStorageCabinets);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnArmchairs() {
+        click(armchairs);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnArmoiresWardrobes() {
+        click(armoiresWardrobes);
+        return new MainPage(getDriver());
+    }
+
+    public MainPage clickOnDressersStorage() {
+        click(dressersStorageDrawers);
         return new MainPage(getDriver());
     }
 
