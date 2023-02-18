@@ -14,7 +14,7 @@ public class SignInTest extends BaseTest {
                 .clickLogInButton()
                 .clickSignInButton()
                 .signInAsRegularUser();
-//
+
 //        String actualPageTitle = loyaltyHubPage.getTitle();
 //        Reporter.log(actualPageTitle, true);
 //        Assert.assertEquals(actualPageTitle, "Login - IKEA");
