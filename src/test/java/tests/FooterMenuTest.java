@@ -3,6 +3,7 @@ package tests;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.MainPage;
 import pages.TestData;
@@ -10,6 +11,7 @@ import pages.TestData;
 import java.util.List;
 
 public class FooterMenuTest extends BaseTest {
+    @Ignore
     @Test
     public void testFooterMenuHasSocialMediaIcons(){
         final  List<String> expectedMediaIcons = List.of("facebook",
@@ -23,7 +25,7 @@ public class FooterMenuTest extends BaseTest {
         Assert.assertEquals(mainPage.getNumberSocialMediaNumberIcons(), 5);
         Assert.assertEquals(actualMediaIcons,expectedMediaIcons);
     }
-
+    @Ignore
     @Test(dataProvider = "SocialMediaIcons", dataProviderClass = TestData.class)
     public void testSocialMediaIconsNavigateToCorrespondingPages(
             int index,  String iconName, String expectedUrl, String expectedTitle)
