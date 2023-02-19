@@ -8,7 +8,7 @@ import pages.SearchPage;
 
 public class NurseryFurniturePage extends SearchPage {
 
-    @FindBy(xpath = "//h1[text()='Nursery furniture']")
+    @FindBy(xpath = "//h1[text()='Nursery Furniture']")
     private WebElement NurseryFurnitureList;
 
     public NurseryFurniturePage(WebDriver driver) {
