@@ -1,12 +1,11 @@
 package tests;
 
 import base.BaseTest;
-import com.beust.ah.A;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 
-import pages.furniture_Categories.*;
+import pages.furniture_in_product.*;
 
 public class FurnitureCategoriesTest extends BaseTest {
 
