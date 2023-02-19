@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import javax.security.auth.x500.X500Principal;
 import java.util.List;
 
 public abstract class HeaderBasePage extends BasePage {
@@ -103,6 +104,36 @@ public abstract class HeaderBasePage extends BasePage {
 
     @FindBy(xpath = "//div[@class='header__content']/a")
     private WebElement signInButton;
+
+    @FindBy(xpath = "//span[text()='Beds with storage']")
+    private WebElement bedsWithStorage;
+
+    @FindBy(xpath = "//div[@data-ref-id='69176285']")
+    private WebElement bedMalma;
+
+    @FindBy(xpath = "//span [text()='Bar tables']")
+    private WebElement barTable;
+
+    @FindBy(xpath = "//span [text()='RÖNNINGE ']")
+    private WebElement barTableRoninge;
+
+    @FindBy(xpath = "//span [text()='Café tables']")
+    private WebElement cafeTable;
+
+    @FindBy(xpath = "//span [text()='STENSELE ']")
+    private WebElement cafeTableStensele;
+
+    @FindBy(xpath = "//span [text()='Sectionals']")
+    private WebElement sectionals;
+
+    @FindBy(xpath = "//div[@data-product-number='89440581']")
+    private WebElement sectionalsKivik;
+
+    @FindBy(xpath = "//span [text()='TV stands & benches']")
+    private WebElement tVunit;
+
+    @FindBy(xpath = "//div[@data-product-number='70299879']")
+    private WebElement bestaTVunit;
 
     public HeaderBasePage(WebDriver driver) {
         super(driver);
@@ -271,6 +302,46 @@ public abstract class HeaderBasePage extends BasePage {
         clickOnHamburgerMenu();
         clickOnProductList();
         clickOnFurniture();
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnBedWithStorage() {
+        click(bedsWithStorage);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnBedMalma() {
+        click(bedMalma);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnBarTable() {
+        click(barTable);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnBarTableRoninge() {
+        click(barTableRoninge);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnCafeTable() {
+      click(cafeTable);
+      return new MainPage(getDriver());
+    }
+    public MainPage clickOnCafeTableStensele() {
+        click(cafeTableStensele);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnSectionals() {
+        click(sectionals);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnSectionalsKivik() {
+        click(sectionalsKivik);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnTvUnit() {
+        click(tVunit);
+        return new MainPage(getDriver());
+    }
+    public MainPage clickOnBestaTVunit() {
+        click(bestaTVunit);
         return new MainPage(getDriver());
     }
 }
