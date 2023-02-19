@@ -11,7 +11,7 @@ import pages.TestData;
 import java.util.List;
 
 public class FooterMenuTest extends BaseTest {
-    @Ignore
+
     @Test
     public void testFooterMenuHasSocialMediaIcons(){
         final  List<String> expectedMediaIcons = List.of("facebook",
