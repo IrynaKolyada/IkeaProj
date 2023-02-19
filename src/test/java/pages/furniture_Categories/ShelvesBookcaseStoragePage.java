@@ -7,7 +7,7 @@ import pages.SearchPage;
 
 public class ShelvesBookcaseStoragePage extends SearchPage {
 
-    @FindBy(xpath = "//h1[text()='Shelving units, bookcase & storage options']")
+    @FindBy(xpath = "//h1[text()='Shelving units, bookcases & storage options']")
     private WebElement shelvesBookcaseList;
 
     public ShelvesBookcaseStoragePage(WebDriver driver) {
